@@ -22,7 +22,7 @@
       --text-color-dark: #f8f9fa;
       --hover-color-light: #868e96;
       --hover-color-dark: #dee2e6;
-      --divider-color: #e0e0e0; /* Light gray divider */
+      --divider-color: #e0e0e0; 
     }
 
     html {
@@ -38,13 +38,12 @@
       margin: 0;
       padding: 0px;
       transition: background-color 0.3s ease, color 0.3s ease;
-      display: block; /* Changed from flex to block */
-      min-height: 200vh; /* Set minimum height to 200vh */
+      display: block; 
+      min-height: 200vh;
       overflow-y: auto;
       overflow-x: hidden;
     }
 
-    /* Fixed header styles with background image */
     .header {
       position: fixed;
       top: 0;
@@ -67,13 +66,11 @@
       color: var(--text-color-dark);
     }
 
-    /* Title inside the header */
     .header h1 {
       margin: 0;
-      flex-grow: 1; /* Take up available space */
+      flex-grow: 1; 
     }
 
-    /* Dark mode styles */
     body.dark-mode {
       background-color: var(--bg-color-dark);
       color: var(--text-color-dark);
@@ -88,28 +85,24 @@
       transition: color 0.3s ease;
     }
 
-    /* Change color of sun/moon icon based on mode */
     body.dark-mode button {
-      color: var(--text-color-dark); /* Light color for the moon icon in dark mode */
+      color: var(--text-color-dark);
     }
-
-    /* Hover effect for button */
+    
     button:hover {
-      color: var(--hover-color-light); /* Hover effect for button: changes to light color */
+      color: var(--hover-color-light);
     }
 
     body.dark-mode button:hover {
-      color: var(--hover-color-dark); /* Hover effect for button in dark mode */
+      color: var(--hover-color-dark);
     }
 
-    /* Prevent sun icon from turning white on hover in light mode */
     button i {
-      color: inherit; /* Ensure the icon inherits button color */
+      color: inherit; 
     }
 
-    /* Filler text styles */
     .content {
-      position: relative; /* Added position relative */
+      position: relative;
       margin-top: 70px;
       width: 100%;
       height: calc(100vh - 70px);
@@ -235,26 +228,23 @@
     const header = document.querySelector('.header');
     const titleDivider = document.querySelector('.title-divider');
 
-    // Check for saved mode in localStorage
     if (localStorage.getItem('darkMode') === 'enabled') {
       body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>'; // Display moon icon for dark mode
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>'; 
     } else {
       body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>'; // Display sun icon for light mode
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
     }
 
     toggleBtn.addEventListener('click', () => {
-      // Toggle the dark mode
       body.classList.toggle('dark-mode');
       
-      // Toggle between sun and moon icon based on the mode
       if (body.classList.contains('dark-mode')) {
         toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-        localStorage.setItem('darkMode', 'enabled'); // Save dark mode preference
+        localStorage.setItem('darkMode', 'enabled'); 
       } else {
         toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-        localStorage.setItem('darkMode', 'disabled'); // Save light mode preference
+        localStorage.setItem('darkMode', 'disabled'); 
       }
     });
   </script>
