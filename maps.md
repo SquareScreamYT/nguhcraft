@@ -12,6 +12,6 @@
 
 ![Rails of Eras Map](/rails_of_eras.png)
 
-## CMCic Federation Rail
+## CMCRail
 
-![CMCic Federation Rail Map](/cmcic_federation_rail.png)
+![CMCRail Map](/cmcrail.png)
