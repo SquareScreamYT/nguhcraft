@@ -2,7 +2,7 @@
 
 ## Cenrail
 
-![Cenrail Map](/cenrail.png)
+![Cenrail Map](/cenrail2.png)
 
 ## Chillvana Metro
 
